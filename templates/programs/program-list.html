@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PProgramming Languages</title>
+</head>
+<body>
+    <h1>Programming Languages</h1>
+    {% for post in posts %}
+        <h3>{{ post.title }}</h3>
+        <h3>{{ post.description }}</h3>
+    {% empty %}
+        <h3>Post's empty</h3>
+    {% endfor %}
+    <a href="{% url 'programs:post_create' %}">Create post</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Post</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Title</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="description">Description</label><br>
+        <textarea name="description" id="description" ></textarea><br>
+        <input type="submit" value="Create post">
+        </form>
+        <a href="{% url 'programs:post_list' %}">Back to Programming Languages List</a>
+</body>
+</html>
