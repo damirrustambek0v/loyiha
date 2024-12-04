@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 
-from.models import Post
+from .models import Post
 
 def post_list(request):
     posts = Post.objects.all()
     ctx = {'posts': posts}
-    return render(request, 'programs/program-list.html',ctx)
+    return render(request, 'programs/program-form.html', ctx)
 
 
 def post_create(request):
@@ -17,7 +17,7 @@ def post_create(request):
             description=description
         )
         return redirect('programs:post_list')
-    return render(request, 'programs/program-form.html')
+    return render(request, 'programs/program-list.html')
 
 
 

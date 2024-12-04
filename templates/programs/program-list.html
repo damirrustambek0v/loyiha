@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>PProgramming Languages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Language</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        a {
+            font-size: 18px;
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Programming Languages</h1>
-    {% for post in posts %}
-        <h3>{{ post.title }}</h3>
-        <h3>{{ post.description }}</h3>
+    <h1>Programming Language</h1>
+    {% for prog in prog %}
+        <h3>{{ prog.name}}</h3>
     {% empty %}
-        <h3>Post's empty</h3>
-    {% endfor %}
-    <a href="{% url 'programs:post_create' %}">Create post</a>
+        <h3>Program's empty</h3>
+    {% endfor%}
+    <a href="{% url 'programs:post_list' %}">Add New Language</a>
 </body>
 </html>
